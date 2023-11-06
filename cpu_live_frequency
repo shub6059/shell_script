@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+while sleep 1; 
+do cat /proc/cpuinfo | grep -m 1 "cpu MHz" | awk -F':' '{print $2}'; 
+done

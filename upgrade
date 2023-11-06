@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+SU=''
+if [ $EUID != 0 ];
+then
+	SU='sudo'
+fi
+$SU apt update; $SU apt upgrade -y; $SU apt autoremove -y

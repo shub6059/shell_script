@@ -1,0 +1,4 @@
+#! /usr/bin/env bash
+
+# My Prometheus is accessible on localhost:9090. Change this as necessary
+curl -vs localhost:9090/metrics 2>&1 | grep "TYPE" | cut -d' ' -f3-

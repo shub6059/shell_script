@@ -1,0 +1,2 @@
+#! /usr/bin/env bash
+cat /proc/cpuinfo | grep -m 1 "model name" | awk -F':' '{print $2}'
